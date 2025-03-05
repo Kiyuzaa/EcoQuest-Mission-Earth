@@ -54,7 +54,6 @@ body {
     z-index: 150;
 }
 
-
 .popup {
     position: fixed;
     top: 50%;
@@ -69,6 +68,13 @@ body {
 
 .popup img {
     width: 300px;
+    position: relative;
+}
+
+.final-score {
+    margin-top: 10px; /* Add margin to separate from the image */
+    font-size: 24px;
+    color: black;
 }
 
 .hidden {
@@ -90,4 +96,32 @@ body {
 .volume {
     top: 20px;
     right: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent; /* Make background transparent */
+    color: black; /* Adjust text color for better visibility */
+    background-size: contain; /* Ensure the image fits within the button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    text-align: center; /* Center the text */
+    line-height: 70px; /* Center the text vertically */
+}
+
+#play-again {
+    background-image: url('../../Asset/ButtonTryPapanScore.png'); /* Use the new image for the play again button */
+    width: ;
+}
+
+#back-to-menu {
+    background-image: url('../../Asset/ButtonHomePapanScore.png'); /* Use the new image for the back to menu button */
+}
+
+button:hover {
+    opacity: 0.8; /* Add a hover effect */
 }

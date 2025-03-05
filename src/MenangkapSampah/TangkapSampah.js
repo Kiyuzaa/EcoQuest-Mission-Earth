@@ -10,7 +10,7 @@ window.onload = function () {
     
     let score = 0;
     let lives = 3;
-    let timeLeft = 60;
+    let timeLeft = 1;
     let gameActive = true;
     let trashBinX = gameArea.clientWidth / 2; // Posisi awal tempat sampah
     const trashBinSpeed = 20; // Kecepatan tempat sampah
@@ -145,6 +145,7 @@ window.onload = function () {
         if (victory) {
             document.getElementById('final-score').textContent = score;
             victoryPopup.classList.remove('hidden');
+            victoryPopup.style.display = 'block'; // Ensure the popup is displayed
         } else {
             window.location.href = 'gameover.html';
         }
@@ -152,6 +153,16 @@ window.onload = function () {
 
     // Tombol kembali ke menu
     document.getElementById('btn-kembali').addEventListener('click', () => {
+        window.location.href = '../PilihPermainan/PilihPermainan.html';
+    });
+
+    // Tombol main lagi
+    document.getElementById('play-again').addEventListener('click', () => {
+        window.location.reload();
+    });
+
+    // Tombol kembali ke menu utama dari popup kemenangan
+    document.getElementById('back-to-menu').addEventListener('click', () => {
         window.location.href = '../PilihPermainan/PilihPermainan.html';
     });
 };
